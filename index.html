@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Roulette Statistics</h1>
+        </div>
+
+        <div class="history-section">
+            <h2>History</h2>
+            <div id="full-history" class="full-history">
+                <!-- Full history will be displayed here -->
+            </div>
+        </div>
+        
+        <div class="main-section">
+            <div class="number-grid">
+                <h2>Select a Number</h2>
+                <div class="numbers">
+                    <!-- Numbers 0 to 36 will be generated here -->
+                </div>
+            </div>
+
+            <div class="input-section">
+                <label for="history-input">Paste History: </label>
+                <input type="text" id="history-input" placeholder="Enter numbers separated by space or comma">
+                <button id="add-history">Add History</button>
+                <button id="clear-last">Clear Last</button>
+                <button id="clear-all">Clear All</button>
+                <br><br>
+                <label for="analysis-limit">Limit Analysis to Last: </label>
+                <input type="number" id="analysis-limit" placeholder="Enter number of spins" min="1">
+            </div>
+            
+            <div class="statistics">
+                <h2>Advanced Statistics</h2>
+                <div class="recent-numbers" id="recent-numbers">
+                    <!-- Recent numbers will be added here -->
+                </div>
+                <div class="percentages">
+                    <div class="row">
+                        <div class="column" id="zero">0 <span>0%</span></div>
+                        <div class="column" id="dozen-1">1ST DOZEN <span>0%</span></div>
+                        <div class="column" id="dozen-2">2ND DOZEN <span>0%</span></div>
+                        <div class="column" id="dozen-3">3RD DOZEN <span>0%</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="column" id="column-1">1ST COLUMN <span>0%</span></div>
+                        <div class="column" id="column-2">2ND COLUMN <span>0%</span></div>
+                        <div class="column" id="column-3">3RD COLUMN <span>0%</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="column" id="low">LOW (1-18) <span>0%</span></div>
+                        <div class="column" id="high">HIGH (19-36) <span>0%</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="column" id="even">EVEN <span>0%</span></div>
+                        <div class="column" id="odd">ODD <span>0%</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="column" id="red">RED <span>0%</span></div>
+                        <div class="column" id="black">BLACK <span>0%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
